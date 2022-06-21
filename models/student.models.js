@@ -5,6 +5,7 @@ const StudentSchema = new mongoose.Schema({
 	email: { type: String },
 	age: { type: Number },
 	faculty: {type:mongoose.Schema.Types.ObjectId, ref: "Faculty"},
+	createdBy: {type:mongoose.Schema.Types.ObjectId, ref:"User"}
 },
 { timestamps:true}
 );

@@ -12,6 +12,6 @@ router.get("/", getFaculties);
 router.get('/:facultyId', getFaculty)
 router.delete("/:facultyId", deleteFaculty);
 router.put("/:facultyId", updateFaculty);
-router.post("/", createFaculty);
+router.post("/",verifyToken, createFaculty);
 
 module.exports = router;

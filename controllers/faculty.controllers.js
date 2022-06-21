@@ -5,6 +5,7 @@ const createFaculty = async (req, res) => {
 		name: req.body.name,
 		location: req.body.location,
 		foundationDate: req.body.foundationDate,
+		createdBy: req.verifiedUser._id,
 	});
 	try {
 		const savedFaculty = await newFaculty.save();

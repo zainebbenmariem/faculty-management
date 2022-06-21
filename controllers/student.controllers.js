@@ -5,7 +5,8 @@ const createStudent = async (req, res) => {
 		name: req.body.name,
 		email: req.body.email,
 		age: req.body.age,
-		faculty: req.body.faculty
+		faculty: req.body.faculty,
+		createdBy: req.verifiedUser._id
 	});
 	try {
 		const savedStudent = await newStudent.save();
